@@ -2,6 +2,7 @@
 // Write your Character component here
 import React, { useState, useEffect} from 'react'
 import styled from 'styled-components'
+import axios from 'axios'
 
 const StyledDiv = styled.div`
     border: 3px solid black;
@@ -9,14 +10,27 @@ const StyledDiv = styled.div`
     margin: 5px 5px;
 `
 
+const StyledH3 = styled.h3`
+    color: darkblue;
+`
+
+
 function Character(props){
 
-    const { name, gender, height } = props
+    const { name, gender, height} = props
+   
+
+    
+    
+    
+
     return(
        <StyledDiv>
-           <h3>{name}</h3>
+           <StyledH3>{name}</StyledH3>
            <p>gender: {gender}</p>
            <p>height: {height}</p>
+           
+          
        </StyledDiv>
     )
 }
